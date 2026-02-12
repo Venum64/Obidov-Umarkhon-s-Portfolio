@@ -1,0 +1,33 @@
+// Montserrat start
+
+$Montserrat: (
+    'SemiBold',
+    600),
+    ('Bold', 700),
+    ('ExtraBold', 800
+);
+
+@each $name , $weight in $Montserrat {
+    @font-face {
+        font-family: 'Montserrat';
+        src: url("../fonts/Montserrat/Montserrat-#{name}.ttf");
+        font-weight: $weight;
+    }
+}
+
+// Montserrat end
+
+// Inter start
+
+$Inter : ('Regular', 400),
+('Medium', 500);
+
+@each $name, $weight in $Inter {
+    @font-face {
+        font-family: 'FontName';
+        src: url('../fonts/Inter/Inter_24pt-#{name}.ttf');
+        font-weight: $weight;
+    }
+}
+
+// Inter end

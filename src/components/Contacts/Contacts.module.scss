@@ -1,0 +1,36 @@
+.contacts{
+    padding: 100px 0;
+
+    &__title {
+        text-align: center;
+        margin: 0 auto 16px;
+        font-size: 40px;
+        color: var(--accent-color);
+        font-family: "Montserrat", sans-serif;
+        font-weight: 800;
+        line-height: 48px;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 120%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            height: 150px;
+            background: rgba(0, 242, 254, 0.15);
+            filter: blur(50px);
+            border-radius: 35%;
+            z-index: -1;
+        }
+    }
+
+    &__subtitle {
+        color: var(--muted);
+        text-align: center;
+        margin: 0 auto 55px;
+        width: 425px;
+        line-height: 22px;
+    }
+}

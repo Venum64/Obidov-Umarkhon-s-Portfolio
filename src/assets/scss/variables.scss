@@ -1,0 +1,45 @@
+// Цвета для темной темы
+$body-bg-dark: #0F0F0F;
+$header-bg-dark: #1A1A1A;
+$header-bg-dark-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+$text-main-dark: #F5F7FA;
+$text-muted-dark: rgba(245, 247, 250, 0.8);
+$line-color-dark: #333333;
+$line-shadow-bl: 0 4px 12px rgba(30, 41, 59, 0.2), 0 2px 4px rgba(30, 41, 59, 0.1);
+
+// Цвета для Светлой темы
+$body-bg-light: #F5F7FA;
+$header-bg-light: #FFFFFF;
+$header-bg-light-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+$text-main-light: #1A1A1A;
+$text-muted-light: rgba(26, 26, 26, 0.7);
+$line-color-light: #E4E7EB;
+$accent: #00F2FE;
+$transition-speed: 1.2s;
+$line-shadow-wh: 0 0 8px rgba(255, 255, 255, 0.5),
+    0 0 15px rgba(255, 255, 255, 0.2);
+
+:root {
+    --body-bg: #{$body-bg-light};
+    --header-bg: #{$header-bg-light};
+    --header-shadow: #{$header-bg-dark-shadow};
+    --main: #{$text-main-light};
+    --muted: #{$text-muted-light};
+    --line-color: #{$line-color-light};
+    --accent-color: #{$accent};
+    --speed: #{$transition-speed};
+    --line-bg: #{$header-bg-light};
+    --line-shadow: #{$line-shadow-bl};
+}
+
+[data-theme="dark"] {
+    --body-bg: #{$body-bg-dark};
+    --header-bg: #{$header-bg-dark};
+    --main: #{$text-main-dark};
+    --muted: #{$text-muted-dark};
+    --line-color: #{$line-color-dark};
+    --speed: #{$transition-speed};
+    --line-bg: #{$body-bg-light};
+    --line-shadow: #{$line-shadow-wh};
+    --header-shadow: #{$header-bg-light-shadow};
+}

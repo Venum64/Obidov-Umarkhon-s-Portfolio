@@ -1,0 +1,116 @@
+.services {
+    padding: 100px 0;
+
+    &_title {
+        text-align: center;
+        margin: 0 auto 16px;
+        font-size: 40px;
+        color: var(--accent-color);
+        font-family: "Montserrat", sans-serif;
+        font-weight: 800;
+        line-height: 48px;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 120%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            height: 150px;
+            background: rgba(0, 242, 254, 0.15);
+            filter: blur(50px);
+            border-radius: 35%;
+            z-index: -1;
+        }
+    }
+
+    &_subtitle {
+        color: var(--muted);
+        text-align: center;
+        margin: 0 auto 55px;
+        width: 425px;
+        line-height: 22px;
+    }
+
+    &__block {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 1fr;
+        gap: 30px;
+    }
+
+    &__card {
+        border-radius: 15px;
+        border: 2px solid var(--accent-color);
+        padding: 30px 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        height: 100%;
+        transition: 0.3s all ease-in-out;
+
+        &:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 15px rgba(0, 242, 254, 0.3);
+        }
+
+        &_i {
+            font-size: 24px;
+            border: var(--accent-color) 2px solid;
+            border-radius: 10px;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 15px rgba(0, 242, 254, 0.3);
+            background: var(--header-bg);
+            flex-shrink: 0;
+            margin-bottom: 20px;
+        }
+
+        &_h {
+            font-size: 22px;
+            color: var(--main);
+            font-family: "Montserrat", sans-serif;
+            font-weight: 600;
+            margin-bottom: 32px;
+            align-items: center;
+        }
+
+        &_p {
+            color: var(--muted);
+            font-size: 17px;
+            line-height: 22px;
+            font-family: "Inter", sans-serif;
+            font-weight: 500;
+        }
+
+        &_list {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            &_wrapper {
+                display: flex;
+                gap: 10px;
+            }
+
+            &_icon {
+                color: var(--accent-color);
+                font-size: 18px;
+            }
+
+            &_text {
+                font-weight: 400;
+                font-family: "Inter", sans-serif;
+                color: rgba(148, 163, 184, 0.8);
+
+            }
+
+        }
+    }
+}
