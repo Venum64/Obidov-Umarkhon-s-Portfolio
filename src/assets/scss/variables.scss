@@ -20,6 +20,19 @@ $line-shadow-wh: 0 0 8px rgba(255, 255, 255, 0.5),
     0 0 15px rgba(255, 255, 255, 0.2);
 
 :root {
+    --body-bg: #{$body-bg-dark};
+    --header-bg: #{$header-bg-dark};
+    --header-shadow: #{$header-bg-light-shadow};
+    --main: #{$text-main-dark};
+    --muted: #{$text-muted-dark};
+    --line-color: #{$line-color-dark};
+    --accent-color: #{$accent};
+    --speed: #{$transition-speed};
+    --line-bg: #{$body-bg-light};
+    --line-shadow: #{$line-shadow-wh};
+}
+
+[data-theme="light"] {
     --body-bg: #{$body-bg-light};
     --header-bg: #{$header-bg-light};
     --header-shadow: #{$header-bg-dark-shadow};
@@ -30,16 +43,4 @@ $line-shadow-wh: 0 0 8px rgba(255, 255, 255, 0.5),
     --speed: #{$transition-speed};
     --line-bg: #{$header-bg-light};
     --line-shadow: #{$line-shadow-bl};
-}
-
-[data-theme="dark"] {
-    --body-bg: #{$body-bg-dark};
-    --header-bg: #{$header-bg-dark};
-    --main: #{$text-main-dark};
-    --muted: #{$text-muted-dark};
-    --line-color: #{$line-color-dark};
-    --speed: #{$transition-speed};
-    --line-bg: #{$body-bg-light};
-    --line-shadow: #{$line-shadow-wh};
-    --header-shadow: #{$header-bg-light-shadow};
 }

@@ -1,23 +1,10 @@
 import { useEffect, useState } from 'react'
 import h from '../Hero/Hero.module.scss'
 import { logoBl, logoWh, me } from '../../../js/reExport.js'
+import { useTheme } from '../../../js/theme.js'
 
 const Hero = () => {
-    const [isDark, setIsDark] = useState(localStorage.getItem('theme') === 'dark');
-
-    useEffect(() => {
-        if (isDark) {
-            document.body.setAttribute('data-theme', 'dark');
-            localStorage.setItem('theme', 'dark');
-        } else {
-            document.body.removeAttribute('data-theme');
-            localStorage.setItem('theme', 'light');
-        }
-    }, [isDark]);
-
-    const Theme = () => setIsDark(!isDark);
-
-
+    const [isDark, Theme] = useTheme();
     const [isScrolled, setIsScrolled] = useState(false);
 
     useEffect(() => {
@@ -31,27 +18,47 @@ const Hero = () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+
+    const iconsAdd = [
+        {
+            id: 1,
+            l: `https://github.com/Venum64`,
+            i: 'fa-brands fa-github',
+        },
+        {
+            id: 2,
+            l: `https://t.me/premuim_sss`,
+            i: 'fa-brands fa-telegram',
+        },
+        {
+            id: 3,
+            l: `tel:+998910372011`,
+            i: 'fa-solid fa-phone',
+        },
+    ]
+
+
     return (
         <>
             {/* header start */}
 
             <header className={`${h.header} ${isScrolled ? h.scrolled : ''}`}>
                 <nav className={`${h.header__nav} container`}>
-                    <a href={`https://github.com/Venum64`} className={h.header__logo}>
+                    <a href={`#`} className={h.header__logo}>
                         <img src={isDark ? logoWh : logoBl} alt="" />
                     </a>
                     <ul className={h.header__nav_list}>
                         <li className={h.header__nav_list_item}>
-                            <a href="#" className={h.header__nav_list_item_link} >About</a>
+                            <a href="#" className={h.header__nav_list_item_link}>About</a>
                         </li>
                         <li className={h.header__nav_list_item}>
-                            <a href="#" className={h.header__nav_list_item_link}>Experience</a>
+                            <a href="#" className={h.header__nav_list_item_link}>Skills</a>
                         </li>
                         <li className={h.header__nav_list_item}>
                             <a href="#" className={h.header__nav_list_item_link}>Services</a>
                         </li>
                         <li className={h.header__nav_list_item}>
-                            <a href="#" className={h.header__nav_list_item_link}>Portfolio</a>
+                            <a href="#" className={h.header__nav_list_item_link}>Projects</a>
                         </li>
                         <li className={h.header__nav_list_item}>
                             <a href="#" className={h.header__nav_list_item_link}>Contacts</a>
@@ -82,21 +89,13 @@ const Hero = () => {
                             <button className={h.review__l_btn}>My projects</button>
                         </div>
                         <div className={h.review__l_icons}>
-                            <a href={`https://github.com/Venum64`} className={h.review__l_a}>
-                                <span className={h.review__l_icon}>
-                                    <i class="fa-brands fa-github" ></i>
-                                </span>
-                            </a>
-                            <a href={`https://t.me/premuim_sss`} className={h.review__l_a}>
-                                <span className={h.review__l_icon}>
-                                    <i class="fa-brands fa-telegram"></i>
-                                </span>
-                            </a>
-                            <a href={`tel:+998910372011`} className={h.review__l_a} >
-                                <span className={h.review__l_icon}>
-                                    <i class="fa-solid fa-phone"></i>
-                                </span>
-                            </a>
+                            {iconsAdd.map((i) => (
+                                <a href={i.l} className={h.review__l_a} key={i.id}>
+                                    <span className={h.review__l_icon}>
+                                        <i className={i.i} ></i>
+                                    </span>
+                                </a>
+                            ))}
                         </div>
                     </div>
                     <div className={h.review__r}>

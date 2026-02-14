@@ -1,5 +1,5 @@
 import { antools, food, santek, totembo, virtual, vue } from '../../../js/reExport';
-import p from '../Portfolio/Portfolio.module.scss';
+import p from '../Projects/Projects.module.scss';
 
 const Portfolio = () => {
   const cardsAdd = [
@@ -49,7 +49,7 @@ const Portfolio = () => {
       l: `https://venum64.github.io/Vuecinemas/`,
     },
     {
-      id: 6,
+      id: 7,
       img: food,
       h: "FOOD100 — Next Level Fast Food Delivery",
       p: "Experience premium quality burgers and combos delivered straight to your door. From our simple classic burgers to the signature Fresh Combo with crispy fries, Food100 offers 100th-level taste and freshness. Quick ordering and high-quality ingredients for the ultimate fast-food experience.",
@@ -79,8 +79,9 @@ const Portfolio = () => {
                 ))}
               </ul>
             <div className={p.portfolio__card_bottom}>
-              <a className={p.portfolio__card_bottom_a} href={card.a} target="_blank" rel="noreferrer"><i className="fa-brands fa-github"></i> Code</a>
-              <a className={p.portfolio__card_bottom_l} href={card.l}>
+              <a className={p.portfolio__card_bottom_a} href={card.a} target="_blank" rel="noreferrer">
+                <i className="fa-brands fa-github"></i> Code</a>
+              <a className={p.portfolio__card_bottom_l} href={card.l} target="_blank" rel="noreferrer">
                 <i className="fa-solid fa-arrow-up-right-from-square"></i> Show Website</a>
             </div>
           </div>
