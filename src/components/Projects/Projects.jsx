@@ -1,4 +1,4 @@
-import { antools, food, santek, totembo, virtual, vue } from '../../../js/reExport';
+import { antools, food, santek, totembo, virtual, vue } from '../../js/reExport';
 import p from '../Projects/Projects.module.scss';
 
 const Portfolio = () => {

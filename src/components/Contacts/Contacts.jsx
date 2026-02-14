@@ -1,6 +1,6 @@
 import c from '../Contacts/Contacts.module.scss'
-import { useTheme } from '../../../js/theme.js'
-import { logoBl, logoWh } from '../../../js/reExport.js'
+import { useTheme } from '../../js/Theme.js'
+import { logoBl, logoWh } from '../../js/reExport.js'
 
 const Contacts = () => {
   const [isDark] = useTheme()

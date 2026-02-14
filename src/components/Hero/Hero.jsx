@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import h from '../Hero/Hero.module.scss'
-import { logoBl, logoWh, me } from '../../../js/reExport.js'
-import { useTheme } from '../../../js/theme.js'
+import { logoBl, logoWh, me } from '../../js/reExport.js'
+import { useTheme } from '../../js/Theme.js'
 
 const Hero = () => {
     const [isDark, Theme] = useTheme();

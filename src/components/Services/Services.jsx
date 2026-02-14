@@ -1,5 +1,5 @@
 import s from '../Services/Services.module.scss'
-import { globe, layout, frontend, mobile, light, api } from '../../../js/reExport.js'
+import { globe, layout, frontend, mobile, light, api } from '../../js/reExport.js'
 
 const Services = () => {
   const cardsAdd = [

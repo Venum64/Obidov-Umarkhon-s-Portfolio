@@ -1,0 +1,15 @@
+export { default as logoWh } from '../assets/images/icons/logo-white.svg';
+export { default as logoBl } from '../assets/images/icons/logo-black.svg';
+export { default as me } from '../assets/images/me.jpg';
+export { default as globe } from '../assets/images/fontsawesome/globe.svg'
+export { default as layout } from '../assets/images/fontsawesome/layout.svg';
+export { default as frontend } from '../assets/images/fontsawesome/code-solid.svg';
+export { default as mobile } from '../assets/images/fontsawesome/mobile.svg';
+export { default as light } from '../assets/images/fontsawesome/lightning.svg';
+export { default as api } from '../assets/images/fontsawesome/api.svg';
+export { default as santek } from '../assets/images/projects/santek.png';
+export { default as food } from '../assets/images/projects/food.png';
+export { default as antools } from '../assets/images/projects/antools.png';
+export { default as totembo } from '../assets/images/projects/totembo.png';
+export { default as virtual } from '../assets/images/projects/virtual.png';
+export { default as vue } from '../assets/images/projects/vue.png';
