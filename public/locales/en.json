@@ -1,0 +1,164 @@
+{
+    "navigation": {
+        "about": "About",
+        "skills": "Skills",
+        "services": "Services",
+        "projects": "Projects",
+        "contacts": "Contacts",
+        "language": "RU"
+    },
+    "hero": {
+        "myname": "Hello my name is Umarkhon",
+        "mydev": "Frontend Developer | Web Developer",
+        "mydesc": "I create modern web applications with a focus on clean code, performance, and visual aesthetics. I specialize in React and modern JavaScript technologies.",
+        "myprojects": "My projects"
+    },
+    "about": {
+        "abouttitle": "About Me",
+        "aboutsub": "I'm a passionate junior frontend developer with a love for creating engaging web experiences.",
+        "features": {
+            "cleanCode": {
+                "title": "Clean Code",
+                "desc": "Creating maintainable, efficient, and readable code using modern standards."
+            },
+            "uiux": {
+                "title": "UI/UX Focus",
+                "desc": "Designing intuitive interfaces with a focus on great user experience."
+            },
+            "fastLearner": {
+                "title": "Fast Learner",
+                "desc": "Quickly mastering new technologies and staying ahead of industry trends."
+            }
+        },
+        "journey": {
+            "title": "My Journey",
+            "text1": "My journey into web development started with a curiosity about how websites work. Since then, I've been dedicated to learning and improving my skills every day.",
+            "text2": "I've completed several personal projects and freelance work, which has given me hands-on experience with modern frontend technologies. I'm now looking for opportunities to grow as part of a collaborative team."
+        }
+    },
+    "skills": {
+        "title": "Skills & Technologies",
+        "subtitle": "Here are the technologies and tools I work with to bring ideas to life",
+        "categories": {
+            "frontend": "Frontend",
+            "styling": "Styling",
+            "tools": "Tools & Others"
+        }
+    },
+    "services": {
+        "title": "What I Offer",
+        "subtitle": "Comprehensive web development services to help bring your ideas to life with modern technologies and best practices.",
+        "card": {
+            "title": {
+                "webDev": "Web Development",
+                "uiuxDesign": "UI/UX Design",
+                "frontendDev": "Frontend Development",
+                "responsive": "Responsive Design",
+                "performance": "Performance Optimization",
+                "api": "API Integration"
+            },
+            "desc": {
+                "webDev": "Building responsive and modern websites using the latest technologies and best practices.",
+                "uiuxDesign": "Creating beautiful and intuitive user interfaces that provide excellent user experience.",
+                "frontendDev": "Developing interactive web applications with React, TypeScript, and modern frameworks.",
+                "responsive": "Ensuring your website looks perfect on all devices, from mobile to desktop.",
+                "performance": "Optimizing websites for speed and performance to improve user engagement.",
+                "api": "Integrating third-party services and APIs to extend your website functionality."
+            },
+            "features": {
+                "webDev": [
+                    "Custom Design",
+                    "SEO Optimized",
+                    "Fast Loading"
+                ],
+                "uiuxDesign": [
+                    "Wireframing",
+                    "Prototyping",
+                    "User Research"
+                ],
+                "frontendDev": [
+                    "React/Next.js",
+                    "TypeScript",
+                    "State Management"
+                ],
+                "responsive": [
+                    "Mobile-First",
+                    "Cross-Browser",
+                    "Adaptive Layout"
+                ],
+                "performance": [
+                    "Code Splitting",
+                    "Lazy Loading",
+                    "Caching"
+                ],
+                "api": [
+                    "REST APIs",
+                    "GraphQL",
+                    "Authentication"
+                ]
+            }
+        }
+    },
+    "projects": {
+        "title": "Featured Projects",
+        "subtitle": "Here are some of my recent projects that showcase my skills and passion for web development.",
+        "items": {
+            "antools": "Antools — Curated Directory of Design & Development Tools",
+            "santek": "Santek — Water heated towel rails",
+            "zone": "Zone — Virtual Reality Business Solutions & AI Consulting",
+            "totembo": "Totembo — Premium Watches and Luxury Accessories",
+            "vueCinemas": "Vue Cinemas — Ultimate Movie Streaming Platform",
+            "food100": "FOOD100 — Next Level Fast Food Delivery"
+        },
+        "descriptions": {
+            "antools": "Find the perfect tools for your next project with Antools. Explore a comprehensive collection of over 400+ free and paid resources carefully selected for designers and developers.",
+            "santek": "A comprehensive e-commerce catalog featuring premium water-heated towel rails. The platform showcases a wide range of modern designs.",
+            "zone": "Transform your enterprise with cutting-edge VR and AI technologies. We provide innovative virtual solutions and artificial intelligence integration to drive growth.",
+            "totembo": "Discover an exclusive collection of men's and women's watches, rings, and elegant jewelry at Totembo. Shop premium brands with international quality.",
+            "vueCinemas": "Experience cinema at home with a vast selection of films, series, and cartoons. Our platform offers high-quality streaming and a personalized viewing experience.",
+            "food100": "Experience premium quality burgers and combos delivered straight to your door. Quick ordering and high-quality ingredients for the ultimate fast-food experience."
+        },
+        "buttons": {
+            "code": "Code",
+            "website": "Show Website"
+        }
+    },
+    "contact": {
+        "title": "Get In Touch",
+        "subtitle": "I'm currently looking for new opportunities. Whether you have a question or just want to say hi, feel free to reach out!",
+        "infoTitle": "Contact Information",
+        "details": {
+            "email": "umarhonobidov400@gmail.com",
+            "phone": "+998-91-037-20-11",
+            "location": "Tashkent, Yunusabad region",
+            "telegram": "@premium_sss",
+            "github": "Venum64",
+            "instagram": "@premium__sss",
+            "locationText": "Ташкент, Юнусабадский район"
+        },
+        "footerNote": "I'm open to discussing web development projects, creative ideas, or partnership opportunities.",
+        "contactTitles": {
+            "email": "Электронная почта",
+            "phone": "Телефон",
+            "location": "Местоположение",
+            "telegram": "Телеграм",
+            "github": "Гитхаб",
+            "instagram": "Инстаграм"
+        }
+    },
+    "footer": {
+        "brandDesc": "Passionate frontend developer specializing in creating beautiful, responsive web experiences. Let's build something amazing together.",
+        "navTitle": "Navigation",
+        "servicesTitle": "Services",
+        "resourcesTitle": "Resources",
+        "connectTitle": "Connect",
+        "follow": "Follow me on social media",
+        "links": {
+            "blog": "Blog",
+            "portfolio": "Portfolio",
+            "resume": "Resume/CV",
+            "caseStudies": "Case Studies",
+            "testimonials": "Testimonials"
+        }
+    }
+}

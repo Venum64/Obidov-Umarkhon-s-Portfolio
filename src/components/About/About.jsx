@@ -1,46 +1,45 @@
 import React from 'react'
 import a from '../About/About.module.scss'
 import { me } from '../../js/reExport'
-
+import { useTranslation } from 'react-i18next';
+import useFadeEffects from '../../js/animations.js'
 
 const About = () => {
+  useFadeEffects('.speed')
+  const { t } = useTranslation()
+
   const cardsData = [
     {
       id: 1,
       icon: "fa-solid fa-code",
-      title: "Clean Code",
-      text: "Creating maintainable, efficient, and readable code using modern standards."
+      title: t('about.features.cleanCode.title'),
+      text: t('about.features.cleanCode.desc')
     },
     {
       id: 2,
       icon: "fa-solid fa-bezier-curve",
-      title: "UI/UX Focus",
-      text: "Designing intuitive interfaces with a focus on great user experience.",
+      title: t('about.features.uiux.title'),
+      text: t('about.features.uiux.desc'),
     },
     {
       id: 3,
       icon: "fa-solid fa-brain",
-      title: "Fast Learner",
-      text: "Quickly mastering new technologies and staying ahead of industry trends.",
+      title: t('about.features.fastLearner.title'),
+      text: t('about.features.fastLearner.desc'),
     },
   ];
 
   const journeyData = {
-    title: "My Journey",
-    text: "My journey into web development started with a curiosity about how websites work. Since then, I've been dedicated to learning and improving my skills every day.",
-    desc: "I've completed several personal projects and freelance work, which has given me hands-on experience with modern frontend technologies. I'm now looking for opportunities to grow as part of a collaborative team.",
+    title: t('about.journey.title'),
+    text: t('about.journey.text1'),
+    desc: t('about.journey.text2'),
   };
 
   return (
-    <section className={a.biography}>
-      <h2 className={a.title}>About Me</h2>
-      <h3 className={a.subtitle}>
-        I'm a passionate junior frontend developer with a love for creating engaging web experiences.
-      </h3>
+    <section className={`${a.biography} speed`} data-speed='1000'>
+      <h2 className={a.title}>{t('about.abouttitle')}</h2>
+      <h3 className={a.subtitle}>{t('about.aboutsub')}</h3>
       <div className={`container ${a.biography__content}`}>
-        <div className={a.biography_img}>
-          <img src={me} alt="" />
-        </div>
         <div className={a.biography__grid}>
           {cardsData.map((card) => (
             <div key={card.id} className={a.biography_card}>

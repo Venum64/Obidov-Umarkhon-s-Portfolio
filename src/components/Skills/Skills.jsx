@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef } from 'react';
 import s from './Skills.module.scss';
 import SkillsBar from './SkillsBar.jsx'
+import { useTranslation } from 'react-i18next';
 
 const Skills = () => {
   const [isIntersecting, setIntersecting] = useState(false);
@@ -21,9 +22,10 @@ const Skills = () => {
     return () => observer.disconnect();
   }, []);
 
+  const {t} = useTranslation()
   const data = [
     {
-      title: "Frontend",
+      title: t('skills.categories.frontend'),
       skills: [
         { label: "HTML", percentage: 80 },
         { label: "CSS", percentage: 75 },
@@ -32,7 +34,7 @@ const Skills = () => {
       ]
     },
     {
-      title: "Styling",
+      title: t('skills.categories.styling'),
       skills: [
         { label: "Sass/SCSS", percentage: 75 },
         { label: "Responsive Design", percentage: 80 },
@@ -40,7 +42,7 @@ const Skills = () => {
       ]
     },
     {
-      title: "Tools & Others",
+      title: t('skills.categories.tools'),
       skills: [
         { label: "Git", percentage: 75 },
         { label: "Figma", percentage: 70 },
@@ -53,8 +55,8 @@ const Skills = () => {
     <section className={s.skillsSection} ref={sectionRef}>
       <div className={s.container}>
         <div className={s.header}>
-          <h2 className={s.skills__title}>Skills & Technologies</h2>
-          <p>Here are the technologies and tools I work with to bring ideas to life.</p>
+          <h2 className={s.skills__title}>{t("skills.title")}</h2>
+          <p>{t('skills.subtitle')}</p>
         </div>
 
         <div className={s.grid}>

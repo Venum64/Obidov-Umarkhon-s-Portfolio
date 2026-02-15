@@ -55,13 +55,17 @@
             gap: 20px;
         }
 
-        &_icon {
+        &_icon, &_btn {
             cursor: pointer;
             font-size: 20px;
             display: flex;
             align-items: center;
             transition: transform 0.2s ease-in;
             color: var(--main);
+            background: none;
+            outline: none;
+            border: none;
+            text-transform: uppercase;
 
             &:hover {
                 transform: scale(1.1);

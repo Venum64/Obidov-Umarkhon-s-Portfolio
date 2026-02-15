@@ -1,105 +1,108 @@
 import c from '../Contacts/Contacts.module.scss'
 import { useTheme } from '../../js/Theme.js'
 import { logoBl, logoWh } from '../../js/reExport.js'
+import { useTranslation } from 'react-i18next'
 
 const Contacts = () => {
+
+  const { t } = useTranslation()
+
   const [isDark] = useTheme()
 
   const addLink = [
     {
       id: 1,
       icon: 'fa-regular fa-envelope',
-      title: 'Email',
+      title: t("contact.contactTitles.email"),
       link: 'mailto:umarhonobidov400@gmail.com',
       text: 'umarhonobidov400@gmail.com',
     },
     {
       id: 2,
       icon: 'fa-solid fa-phone',
-      title: 'Phone',
+      title: t("contact.contactTitles.phone"),
       link: 'tel:+998910372011',
       text: '+998-91-037-20-11',
     },
     {
       id: 3,
       icon: 'fa-solid fa-location-dot',
-      title: "Location",
-      link: `https://share.google/aBzkyJdQ2OppoRlJW`,
-      text: 'Tashkent, Yunusabad region',
+      title: t("contact.contactTitles.location"),
+      link: 'https://share.google/aBzkyJdQ2OppoRlJW',
+      text: t("contact.details.locationText"),
     },
     {
       id: 4,
       icon: "fa-brands fa-telegram",
-      link: `https://t.me/premuim_sss`,
+      link: 'https://t.me/premuim_sss',
       text: "@premium_sss",
-      title: "Telegram",
+      title: t("contact.contactTitles.telegram"),
     },
     {
       id: 5,
       icon: "fa-brands fa-github",
-      link: `https://github.com/Venum64`,
-      title: "GitHub",
+      link: 'https://github.com/Venum64',
+      title: t("contact.contactTitles.github"),
       text: "Venum64"
     },
     {
       id: 6,
       icon: "fa-brands fa-instagram",
-      link: `https://www.instagram.com/premium__sss`,
-      title: "Instagram",
+      link: 'https://www.instagram.com/premium__sss',
+      title: t("contact.contactTitles.instagram"),
       text: "@premium__sss"
     },
-  ]
-
+  ];
   const footerLinks = [
     {
       id: 1,
-      title: "Navigation",
+      title: t("footer.navTitle"),
       text: [
-        "About Me",
-        "Skills",
-        "Services",
-        "Projects",
-        "Contacts",
+        t("navigation.about"),
+        t("navigation.skills"),
+        t("navigation.services"),
+        t("navigation.projects"),
+        t("navigation.contacts"),
       ]
     },
     {
       id: 2,
-      title: "Services",
+      title: t("footer.servicesTitle"),
       text: [
-        "Web Development",
-        "UI/UX Design",
-        "Frontend Development",
-        "Responsive Design",
-        "API Integration",
+        t("services.card.title.webDev"),
+        t("services.card.title.uiuxDesign"),
+        t("services.card.title.frontendDev"),
+        t("services.card.title.responsive"),
+        t("services.card.title.api"),
       ]
     },
     {
       id: 3,
-      title: "Resources",
+      title: t("footer.resourcesTitle"),
       text: [
-        "Blog",
-        "Portfolio",
-        "Resume/CV",
-        "Case Studies",
-        "Testimonials",
+        t("footer.links.blog"),
+        t("footer.links.portfolio"),
+        t("footer.links.resume"),
+        t("footer.links.caseStudies"),
+        t("footer.links.testimonials"),
       ]
     },
     {
       id: 4,
-      title: "Connect",
-      text: ["Follow me on social media"], 
+      title: t("footer.connectTitle"),
+      text: [t("footer.follow")],
     },
-  ]
+  ];
 
   return (
     <>
       {/* contacts start */}
 
       <section className={c.contacts}>
-        <h2 className={c.contacts__title}>Get In Touch</h2>
-        <p className={c.contacts__subtitle}>I'm currently looking for new opportunities. Whether you have a question or just want to say hi, feel free to reach out!</p>
+        <h2 className={c.contacts__title}>{t('contact.title')}</h2>
+        <p className={c.contacts__subtitle}>{t('contact.subtitle')}</p>
         <div className={`container`}>
-          <h3 className={c.contacts__h}>Contact Information</h3>
+          <h3 className={c.contacts__h}>{t('contact.infoTitle')}</h3>
           <div className={c.contacts__block}>
             <div className={c.contacts__left}>
               {addLink.filter(item => item.id <= 3).map((item) => (
@@ -128,7 +131,7 @@ const Contacts = () => {
               ))}
             </div>
           </div>
-          <p className={c.contacts__p}>I'm open to discussing web development projects, creative ideas, or partnership opportunities.</p>
+          <p className={c.contacts__p}>{t('contact.footerNote')}</p>
         </div>
       </section>
 
@@ -142,7 +145,7 @@ const Contacts = () => {
             <a href={`#`} className={c.footer__logo}>
               <img src={isDark ? logoWh : logoBl} alt="" />
             </a>
-            <p className={c.footer__logo_text}>Passionate frontend developer specializing in creating beautiful, responsive web experiences. Let's build something amazing together.</p>
+            <p className={c.footer__logo_text}>{t('footer.brandDesc')}</p>
             {addLink.filter(item => item.id <= 3).map((item) => (
               <ul className={c.footer__info_list} key={item.id}>
                 <a href={item.link} className={c.footer__info_list_l} target='_blank'>

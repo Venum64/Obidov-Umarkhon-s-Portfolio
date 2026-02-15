@@ -20,3 +20,20 @@ body {
   color: var(--text-main);
   transition: all 0.3s ease;
 }
+
+/* Элементы с классом speed по умолчанию скрыты и смещены */
+/* Начальное состояние: элемент внизу и прозрачный */
+.speed {
+  opacity: 0;
+  transform: translateY(50px); /* Смещение вниз на 50px */
+  will-change: transform, opacity;
+  /* transition задается динамически через JS (data-speed), 
+     но здесь можно оставить дефолт на случай сбоя */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Состояние при активации (когда JS добавил класс active) */
+.speed.active {
+  opacity: 1;
+  transform: translateY(0); /* Возвращается в исходную позицию */
+}
