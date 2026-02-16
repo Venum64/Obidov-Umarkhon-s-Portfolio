@@ -110,7 +110,7 @@ const Hero = () => {
                         </div>
                     </div>
                     <div className={`${h.review__r} speed from-right`} data-speed='1250'>
-                        <img src={me} alt="" />
+                       
                     </div>
                 </div>
             </section >

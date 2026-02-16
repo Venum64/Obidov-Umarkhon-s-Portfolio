@@ -62,7 +62,6 @@ const Skills = () => {
           <h2 className={`${s.skills__title} speed from-bottom`} data-speed='1250'>{t("skills.title")}</h2>
           <p className='speed from-bottom' data-speed='1350 '>{t('skills.subtitle')}</p>
         </div>
-
         <div className={s.grid}>
           {data.map((group, id) => (
             <div key={id} className={s.category}>

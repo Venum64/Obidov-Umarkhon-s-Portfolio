@@ -17,7 +17,8 @@
             top: 120%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 400px;
+            max-width: 400px;
+            width: 100%;
             height: 150px;
             background: rgba(0, 242, 254, 0.15);
             filter: blur(50px);
@@ -39,6 +40,16 @@
         grid-template-columns: repeat(3, 1fr);
         grid-auto-rows: 1fr;
         gap: 30px;
+        @media screen and (max-width:800px) {
+            &{
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media screen and (max-width:565px){
+            &{
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
     }
 
     &__card {

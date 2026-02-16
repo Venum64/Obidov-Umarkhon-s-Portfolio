@@ -12,11 +12,24 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        flex-wrap: wrap;
+
+        @media screen and (max-width:770px) {
+            & {
+                gap: 20px;
+                justify-content: center;
+            }
+        }
 
         &_list {
             display: flex;
             gap: 30px;
             align-items: center;
+            flex-wrap: wrap;
+
+            @media screen and (max-width:475px) {
+                justify-content: center;
+            }
 
             &_item_link {
                 font-family: "Inter", sans-serif;
@@ -162,7 +175,8 @@
         &_p {
             font-weight: 400;
             font-family: "Inter", sans-serif;
-            width: 350px;
+            max-width: 350px;
+            width: 100%;
             color: var(--muted);
         }
 

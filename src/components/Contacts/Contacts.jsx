@@ -65,7 +65,6 @@ const Contacts = () => {
         <h2 className={`${c.contacts__title} speed from-bottom`} data-speed='1200'>{t('contact.title')}</h2>
         <p className={`${c.contacts__subtitle} speed from-bottom`} data-speed='1250'>{t('contact.subtitle')}</p>
         <div className={`${c.contacts__block} container`}><div>
-          <h3 className={`${c.contacts__h} speed from-left`} data-speed='1275'>{t('contact.infoTitle')}</h3>
           <div className={`${c.contacts__left} speed from-left`} data-speed='1300'>
             {addLink.filter(item => item.id <= 3).map((item) => (
               <ul className={c.contacts__list} key={item.id}>
@@ -103,22 +102,20 @@ const Contacts = () => {
 
       <footer className={c.footer}>
         <section className={`container ${c.footer__block}`}>
-          <div className={c.footer__info}>
-            <a href={`#`} className={`${c.footer__logo} speed from-bottom`} data-speed='1250'>
+          <div className={`${c.footer__info} from-bottom speed`} data-speed='1350'>
+            <a href={`#`} className={c.footer__logo}>
               <img src={isDark ? logoWh : logoBl} alt="" />
             </a>
-            <p className={`${c.footer__logo_text} from-bottom speed`} data-speed='1300'>{t('footer.brandDesc')}</p>
-            <div className="speed from-bottom" data-speed='1350'>
-              <ul className={c.footer__info_list}>
-                {addLink.filter(item => item.id <= 3).map((item) => (
-                  <li key={item.id}>
-                    <a href={item.link} className={c.footer__info_list_l} target='_blank'>
-                      <i className={item.icon}></i> {item.text}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <p className={c.footer__logo_text}>{t('footer.brandDesc')}</p>
+            <ul className={c.footer__info_list}>
+              {addLink.filter(item => item.id <= 3).map((item) => (
+                <li key={item.id}>
+                  <a href={item.link} className={c.footer__info_list_l} target='_blank'>
+                    <i className={item.icon}></i> {item.text}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
           <div className={c.footer__links}>
             {footerLinks.map((item) => (
