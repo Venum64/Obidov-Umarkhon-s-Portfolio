@@ -4,7 +4,7 @@
   <path d="M38 22L45 30L38 38" stroke="url(#paint0_linear_dark)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M33 18L27 42" stroke="url(#paint0_linear_dark)" stroke-width="3" stroke-linecap="round"/>
 
-  <text x="70" y="32" fill="#1A1A1A" font-family="Montserrat, sans-serif" font-size="20" font-weight="700">Obidov Umarkhon</text>
+  <text x="70" y="32" fill="#008E97" font-family="Montserrat, sans-serif" font-size="20" font-weight="700">Obidov Umarkhon</text>
   
   <text x="70" y="50" fill="#008E97" font-family="Inter, sans-serif" font-size="10" font-weight="400" letter-spacing="2.5">FRONTEND DEV</text>
 

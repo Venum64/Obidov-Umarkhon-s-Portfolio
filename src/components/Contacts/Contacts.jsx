@@ -1,61 +1,23 @@
 import c from '../Contacts/Contacts.module.scss'
-import { useTheme } from '../../js/Theme.js'
 import { logoBl, logoWh } from '../../js/reExport.js'
 import { useTranslation } from 'react-i18next'
 import useFadeEffects from '../../js/animations.js'
+import { useTheme } from '../../js/Theme.js'
 
 const Contacts = () => {
-
+  const [isDark] = useTheme()
   useFadeEffects('.speed')
   const { t } = useTranslation()
-
-  const [isDark] = useTheme()
-
   const addLink = [
-    {
-      id: 1,
-      icon: 'fa-regular fa-envelope',
-      title: t("contact.contactTitles.email"),
-      link: 'mailto:umarhonobidov400@gmail.com',
-      text: 'umarhonobidov400@gmail.com',
-    },
-    {
-      id: 2,
-      icon: 'fa-solid fa-phone',
-      title: t("contact.contactTitles.phone"),
-      link: 'tel:+998910372011',
-      text: '+998-91-037-20-11',
-    },
-    {
-      id: 3,
-      icon: 'fa-solid fa-location-dot',
-      title: t("contact.contactTitles.location"),
-      link: 'https://share.google/aBzkyJdQ2OppoRlJW',
-      text: t("contact.details.locationText"),
-    },
-    {
-      id: 4,
-      icon: "fa-brands fa-telegram",
-      link: 'https://t.me/premuim_sss',
-      text: "@premium_sss",
-      title: t("contact.contactTitles.telegram"),
-    },
-    {
-      id: 5,
-      icon: "fa-brands fa-github",
-      link: 'https://github.com/Venum64',
-      title: t("contact.contactTitles.github"),
-      text: "Venum64"
-    },
-    {
-      id: 6,
-      icon: "fa-brands fa-instagram",
-      link: 'https://www.instagram.com/premium__sss',
-      title: t("contact.contactTitles.instagram"),
-      text: "@premium__sss"
-    },
+    { id: 1, icon: 'fa-regular fa-envelope', title: t("contact.contactTitles.email"), link: 'mailto:umarhonobidov400@gmail.com', text: 'umarhonobidov400@gmail.com' },
+    { id: 2, icon: 'fa-solid fa-phone', title: t("contact.contactTitles.phone"), link: 'tel:+998910372011', text: '+998-91-037-20-11' },
+    { id: 3, icon: 'fa-solid fa-location-dot', title: t("contact.contactTitles.location"), link: 'https://share.google/aBzkyJdQ2OppoRlJW', text: t("contact.details.locationText") },
+    { id: 4, icon: "fa-brands fa-telegram", link: 'https://t.me/premuim_sss', text: "@premium_sss", title: t("contact.contactTitles.telegram") },
+    { id: 5, icon: "fa-brands fa-github", link: 'https://github.com/Venum64', title: t("contact.contactTitles.github"), text: "Venum64" },
+    { id: 6, icon: "fa-brands fa-instagram", link: 'https://www.instagram.com/premium__sss', title: t("contact.contactTitles.instagram"), text: "@premium__sss" },
   ];
- const footerLinks = [
+
+  const footerLinks = [
     {
       id: 1,
       title: t("footer.navTitle"),
@@ -146,17 +108,16 @@ const Contacts = () => {
               <img src={isDark ? logoWh : logoBl} alt="" />
             </a>
             <p className={`${c.footer__logo_text} from-bottom speed`} data-speed='1300'>{t('footer.brandDesc')}</p>
-            <div className="speed from-bottom" data-speed='1350' >
-              {addLink.filter(item => item.id <= 3).map((item) => (
-                <ul className={c.footer__info_list} key={item.id}>
-                  <a href={item.link} className={c.footer__info_list_l} target='_blank'>
-                    <span className={c.footer__info_list_l_i}>
-                      <i className={item.icon}></i>
-                    </span>
-                    <p className={c.footer__info_list_l_p}>{item.text}</p>
-                  </a>
-                </ul>
-              ))}
+            <div className="speed from-bottom" data-speed='1350'>
+              <ul className={c.footer__info_list}>
+                {addLink.filter(item => item.id <= 3).map((item) => (
+                  <li key={item.id}>
+                    <a href={item.link} className={c.footer__info_list_l} target='_blank'>
+                      <i className={item.icon}></i> {item.text}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
           <div className={c.footer__links}>

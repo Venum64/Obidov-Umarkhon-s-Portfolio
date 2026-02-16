@@ -193,19 +193,18 @@
                 display: flex;
                 align-items: center;
                 gap: 12px;
-                text-decoration: none;
-                color: var(--text-muted);
                 font-family: "Inter", sans-serif;
                 font-size: 16px;
                 transition: 0.3s;
                 cursor: pointer;
+                color: var(--muted);
 
                 &:hover {
                     color: var(--accent-color);
                     transform: scale(1.03);
                 }
 
-                &_l_i {
+                & i {
                     color: var(--accent-color);
                     font-size: 18px;
                 }
