@@ -36,11 +36,13 @@ const About = () => {
   };
 
   return (
-    <section className={`${a.biography} speed`} data-speed='1000'>
-      <h2 className={a.title}>{t('about.abouttitle')}</h2>
-      <h3 className={a.subtitle}>{t('about.aboutsub')}</h3>
+    <section className={a.biography} id='about'>
+      <div className="speed from-bottom" data-speed='1200'>
+        <h2 className={a.title}>{t('about.abouttitle')}</h2>
+        <h3 className={a.subtitle}>{t('about.aboutsub')}</h3>
+      </div>
       <div className={`container ${a.biography__content}`}>
-        <div className={a.biography__grid}>
+        <div className={`${a.biography__grid} speed from-bottom`} data-speed='1300'>
           {cardsData.map((card) => (
             <div key={card.id} className={a.biography_card}>
               <span className={a.biography_card_i}>

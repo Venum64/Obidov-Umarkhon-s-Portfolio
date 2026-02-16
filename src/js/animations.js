@@ -21,8 +21,7 @@ const useFadeEffects = (selector) => {
     };
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Проверка при загрузке страницы
-
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, [selector]);
 };

@@ -55,7 +55,8 @@
             gap: 20px;
         }
 
-        &_icon, &_btn {
+        &_icon,
+        &_btn {
             cursor: pointer;
             font-size: 20px;
             display: flex;
@@ -137,6 +138,12 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
+
+        &_text {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
 
         &_h {
             font-weight: 600;

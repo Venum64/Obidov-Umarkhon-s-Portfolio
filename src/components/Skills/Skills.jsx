@@ -2,8 +2,12 @@ import { useEffect, useState, useRef } from 'react';
 import s from './Skills.module.scss';
 import SkillsBar from './SkillsBar.jsx'
 import { useTranslation } from 'react-i18next';
+import useFadeEffects from '../../js/animations.js';
+
 
 const Skills = () => {
+
+  useFadeEffects('.speed')
   const [isIntersecting, setIntersecting] = useState(false);
   const sectionRef = useRef(null);
 
@@ -22,7 +26,7 @@ const Skills = () => {
     return () => observer.disconnect();
   }, []);
 
-  const {t} = useTranslation()
+  const { t } = useTranslation()
   const data = [
     {
       title: t('skills.categories.frontend'),
@@ -52,11 +56,11 @@ const Skills = () => {
   ];
 
   return (
-    <section className={s.skillsSection} ref={sectionRef}>
+    <section className={s.skillsSection} ref={sectionRef} id='skills'>
       <div className={s.container}>
         <div className={s.header}>
-          <h2 className={s.skills__title}>{t("skills.title")}</h2>
-          <p>{t('skills.subtitle')}</p>
+          <h2 className={`${s.skills__title} speed from-bottom`} data-speed='1250'>{t("skills.title")}</h2>
+          <p className='speed from-bottom' data-speed='1350 '>{t('skills.subtitle')}</p>
         </div>
 
         <div className={s.grid}>
@@ -64,11 +68,11 @@ const Skills = () => {
             <div key={id} className={s.category}>
               <h3>{group.title}</h3>
               {group.skills.map((skill, sId) => (
-                <SkillsBar 
-                  key={sId} 
-                  label={skill.label} 
-                  percentage={skill.percentage} 
-                  isVisible={isIntersecting} 
+                <SkillsBar
+                  key={sId}
+                  label={skill.label}
+                  percentage={skill.percentage}
+                  isVisible={isIntersecting}
                 />
               ))}
             </div>

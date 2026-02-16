@@ -52,10 +52,10 @@ const Services = () => {
 ]
 
   return (
-    <section className={s.services}>
-      <h2 className={s.services_title}>{t('services.title')}</h2>
-      <p className={s.services_subtitle}>{t('services.subtitle')}</p>
-      <div className={`container ${s.services__block}`}>
+    <section className={s.services} id='services'>
+      <h2 className={`${s.services_title} speed from-bottom`} data-speed='1250'>{t('services.title')}</h2>
+      <p className={`${s.services_subtitle} speed from-bottom`} data-speed='1275'>{t('services.subtitle')}</p>
+      <div className={`container ${s.services__block} speed from-bottom`} data-speed='1300'>
         {cardsAdd.map((card) => (
           <div key={card.id} className={s.services__card}>
             <span className={s.services__card_i}>

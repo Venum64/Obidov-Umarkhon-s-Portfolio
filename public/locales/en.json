@@ -138,12 +138,12 @@
         },
         "footerNote": "I'm open to discussing web development projects, creative ideas, or partnership opportunities.",
         "contactTitles": {
-            "email": "Электронная почта",
-            "phone": "Телефон",
-            "location": "Местоположение",
-            "telegram": "Телеграм",
-            "github": "Гитхаб",
-            "instagram": "Инстаграм"
+            "email": "Email",
+            "phone": "Phone",
+            "location": "Location",
+            "telegram": "Telegram",
+            "github": "Github",
+            "instagram": "Instagram"
         }
     },
     "footer": {

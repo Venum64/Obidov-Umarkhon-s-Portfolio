@@ -1,9 +1,10 @@
 import { useTranslation } from 'react-i18next';
 import { antools, food, santek, totembo, virtual, vue } from '../../js/reExport';
 import p from '../Projects/Projects.module.scss';
+import useFadeEffects from '../../js/animations';
 
 const Portfolio = () => {
-
+  useFadeEffects('.speed')
   const { t } = useTranslation()
 
   const cardsAdd = [
@@ -64,11 +65,12 @@ const Portfolio = () => {
   ];
 
   return (
-    <section className={p.portfolio}>
-      <h2 className={p.portfolio_title}>{t('projects.title')}</h2>
-      <p className={p.portfolio_subtitle}>{t("projects.subtitle")}</p>
-
-      <div className={`container ${p.portfolio__content}`}>
+    <section className={p.portfolio} id='projects'>
+      <div className="speed from-bottom" data-speed='1200'>
+        <h2 className={p.portfolio_title}>{t('projects.title')}</h2>
+        <p className={p.portfolio_subtitle}>{t("projects.subtitle")}</p>
+      </div>
+      <div className={`container ${p.portfolio__content} speed from-bottom`} data-speed='1400'>
         {cardsAdd.map((card) => (
           <div className={p.portfolio__card} key={card.id}>
             <div className={p.portfolio__card_img}>

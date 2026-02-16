@@ -3,7 +3,10 @@ import h from '../Hero/Hero.module.scss'
 import { logoBl, logoWh, me } from '../../js/reExport.js'
 import { useTheme } from '../../js/Theme.js'
 import { useTranslation } from 'react-i18next'
+import useFadeEffects from '../../js/animations.js'
+
 const Hero = () => {
+    useFadeEffects('.speed')
     const [isDark, Theme] = useTheme();
     const [isScrolled, setIsScrolled] = useState(false);
 
@@ -55,19 +58,19 @@ const Hero = () => {
                     </a>
                     <ul className={h.header__nav_list}>
                         <li className={h.header__nav_list_item}>
-                            <a href="#" className={h.header__nav_list_item_link}>{t('navigation.about')}</a>
+                            <a href="#about" className={h.header__nav_list_item_link}>{t('navigation.about')}</a>
                         </li>
                         <li className={h.header__nav_list_item}>
-                            <a href="#" className={h.header__nav_list_item_link}>{t('navigation.skills')}</a>
+                            <a href="#skills" className={h.header__nav_list_item_link}>{t('navigation.skills')}</a>
                         </li>
                         <li className={h.header__nav_list_item}>
-                            <a href="#" className={h.header__nav_list_item_link}>{t('navigation.services')}</a>
+                            <a href="#services" className={h.header__nav_list_item_link}>{t('navigation.services')}</a>
                         </li>
                         <li className={h.header__nav_list_item}>
-                            <a href="#" className={h.header__nav_list_item_link}>{t('navigation.projects')}</a>
+                            <a href="#projects" className={h.header__nav_list_item_link}>{t('navigation.projects')}</a>
                         </li>
                         <li className={h.header__nav_list_item}>
-                            <a href="#" className={h.header__nav_list_item_link}>{t('navigation.contacts')}</a>
+                            <a href="#contacts" className={h.header__nav_list_item_link}>{t('navigation.contacts')}</a>
                         </li>
                     </ul>
                     <div className={h.header__nav_icons}>
@@ -86,15 +89,17 @@ const Hero = () => {
 
             <section className={h.review}>
                 <div className={`container ${h.review__content}`}>
-                    <div className={h.review__l}>
-                        <h2 className={h.review__l_h}>{t('hero.myname')}</h2>
-                        <h3 className={h.review__l_s}>{t('hero.mydev')}</h3>
-                        <p className={h.review__l_p}>{t('hero.mydesc')}</p>
-                        <div className={h.review__l_btns}>
+                    <div className={h.review__l} >
+                        <h2 className={`${h.review__l_h} from-left speed`} data-speed='1100'>
+                            {t('hero.myname')}
+                        </h2>
+                        <h3 className={`${h.review__l_s} speed from-left`} data-speed='1150'>{t('hero.mydev')}</h3>
+                        <p className={`${h.review__l_p} speed from-left`} data-speed='1200'>{t('hero.mydesc')}</p>
+                        <div className={`${h.review__l_btns} speed from-left`} data-speed='1250'>
                             <button className={h.review__l_btn}>{t('navigation.contacts')}</button>
                             <button className={h.review__l_btn}>{t('hero.myprojects')}</button>
                         </div>
-                        <div className={h.review__l_icons}>
+                        <div className={`${h.review__l_icons} speed from-left`} data-speed='1300'>
                             {iconsAdd.map((i) => (
                                 <a href={i.l} className={h.review__l_a} key={i.id}>
                                     <span className={h.review__l_icon}>
@@ -104,11 +109,11 @@ const Hero = () => {
                             ))}
                         </div>
                     </div>
-                    <div className={h.review__r}>
+                    <div className={`${h.review__r} speed from-right`} data-speed='1250'>
                         <img src={me} alt="" />
                     </div>
                 </div>
-            </section>
+            </section >
 
             {/* review end */}
         </>
