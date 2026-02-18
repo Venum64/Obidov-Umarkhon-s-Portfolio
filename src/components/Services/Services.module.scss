@@ -31,7 +31,8 @@
         color: var(--muted);
         text-align: center;
         margin: 0 auto 55px;
-        width: 425px;
+        max-width: 425px;
+        width: 100%;
         line-height: 22px;
     }
 
