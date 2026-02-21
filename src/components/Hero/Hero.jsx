@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import h from '../Hero/Hero.module.scss'
-import { logoBl, logoWh } from '../../js/reExport.js'
+import { logoBl, logoWh } from '../../utils/reExport.js'
 import { useTheme } from '../../js/Theme.js'
 import { useTranslation } from 'react-i18next'
 import useFadeEffects from '../../js/animations.js'

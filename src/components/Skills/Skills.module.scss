@@ -42,7 +42,6 @@
             border-radius: 35%;
             z-index: -1;
         }
-
     }
 
     .grid {
@@ -52,6 +51,9 @@
 
         @media (min-width: 768px) {
             grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+        @media screen and (max-width: 600px){
+            gap: 25px;
         }
     }
 }
@@ -69,6 +71,9 @@
 
 .skillItem {
     margin-bottom: 24px;
+    @media screen and (max-width:600px) {
+        margin-bottom: 15px;
+    }
 
     .info {
         display: flex;

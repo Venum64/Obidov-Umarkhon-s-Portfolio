@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { antools, food, santek, totembo, virtual, vue } from '../../js/reExport';
+import { antools, food, santek, totembo, virtual, vue } from '../../utils/reExport';
 import p from '../Projects/Projects.module.scss';
 import useFadeEffects from '../../js/animations';
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import a from '../About/About.module.scss'
-import { me } from '../../js/reExport'
+import { me } from '../../utils/reExport'
 import { useTranslation } from 'react-i18next';
 import useFadeEffects from '../../js/animations.js'
 

@@ -1,5 +1,5 @@
 import c from '../Contacts/Contacts.module.scss'
-import { logoBl, logoWh } from '../../js/reExport.js'
+import { logoBl, logoWh } from '../../utils/reExport.js'
 import { useTranslation } from 'react-i18next'
 import useFadeEffects from '../../js/animations.js'
 import { useTheme } from '../../js/Theme.js'
@@ -60,11 +60,15 @@ const Contacts = () => {
   return (
     <>
       {/* contacts start */}
-
       <section className={c.contacts} id='contacts'>
-        <h2 className={`${c.contacts__title} speed from-bottom`} data-speed='1200'>{t('contact.title')}</h2>
-        <p className={`${c.contacts__subtitle} speed from-bottom`} data-speed='1250'>{t('contact.subtitle')}</p>
-        <div className={`${c.contacts__block} container`}><div>
+        <h2 className={`${c.contacts__title} speed from-bottom`} data-speed='1200'>
+          {t('contact.title')}
+        </h2>
+        <p className={`${c.contacts__subtitle} speed from-bottom`} data-speed='1250'>
+          {t('contact.subtitle')}
+        </p>
+
+        <div className={`${c.contacts__block} container`}>
           <div className={`${c.contacts__left} speed from-left`} data-speed='1300'>
             {addLink.filter(item => item.id <= 3).map((item) => (
               <ul className={c.contacts__list} key={item.id}>
@@ -73,12 +77,14 @@ const Contacts = () => {
                 </span>
                 <li className={c.contacts__list_item}>
                   <h3 className={c.contacts__list_item_h}>{item.title}</h3>
-                  <a href={item.link} className={c.contacts__list_item_l} target='_blank'>{item.text}</a>
+                  <a href={item.link} className={c.contacts__list_item_l} target='_blank' rel="noreferrer">
+                    {item.text}
+                  </a>
                 </li>
               </ul>
             ))}
           </div>
-        </div>
+
           <div className={`${c.contacts__right} speed from-right`} data-speed='1300'>
             {addLink.filter(item => item.id > 3).map((item) => (
               <ul className={c.contacts__list} key={item.id}>
@@ -87,13 +93,18 @@ const Contacts = () => {
                 </span>
                 <li className={c.contacts__list_item}>
                   <h3 className={c.contacts__list_item_h}>{item.title}</h3>
-                  <a href={item.link} className={c.contacts__list_item_l} target='_blank'>{item.text}</a>
+                  <a href={item.link} className={c.contacts__list_item_l} target='_blank' rel="noreferrer">
+                    {item.text}
+                  </a>
                 </li>
               </ul>
             ))}
           </div>
         </div>
-        <p className={`${c.contacts__p} speed from-right`} data-speed='1275'>{t('contact.footerNote')}</p>
+
+        <p className={`${c.contacts__p} speed from-right`} data-speed='1275'>
+          {t('contact.footerNote')}
+        </p>
       </section>
 
       {/* contacts end */}
@@ -129,7 +140,8 @@ const Contacts = () => {
                   </li>
                 ))}
               </ul>
-            ))}</div>
+            ))}
+          </div>
         </section>
       </footer>
 

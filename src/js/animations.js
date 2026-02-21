@@ -3,26 +3,31 @@ import { useEffect } from 'react';
 const useFadeEffects = (selector) => {
   useEffect(() => {
     const elements = document.querySelectorAll(selector);
-
     if (elements.length === 0) return;
 
-    const handleScroll = () => {
-      elements.forEach((el) => {
-        const rect = el.getBoundingClientRect();
-        const triggerPoint = window.innerHeight * 0.85;
-        const speed = el.getAttribute('data-speed') || '800';
-
-        el.style.transition = `all ${speed}ms ease-out`;
-
-        if (rect.top < triggerPoint && rect.bottom > 0) {
-          el.classList.add('active');
-        }
-      });
+    const observerOptions = {
+      root: null,
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
     };
 
-    window.addEventListener('scroll', handleScroll);
-    handleScroll();
-    return () => window.removeEventListener('scroll', handleScroll);
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const speed = el.getAttribute('data-speed') || '800';
+          
+          el.style.transition = `transform ${speed}ms ease-out, opacity ${speed}ms ease-out`;
+          el.classList.add('active');
+          
+          observer.unobserve(el);
+        }
+      });
+    }, observerOptions);
+
+    elements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
   }, [selector]);
 };
 

@@ -13,6 +13,6 @@
   <path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0a2 2 0 0 1 2 2v1H2v-1a2 2 0 0 1 2-2" />
   
   <!-- Смартфон (на переднем плане) -->
-  <rect x="14" y="8" width="6" height="9" rx="1" fill="" stroke="#00F2FE" />
+  <rect x="14" y="8" width="6" height="9" rx="1" fill="" stroke="#008E97" />
   <path d="M16.5 17h1.3" x=""/>
 </svg>
