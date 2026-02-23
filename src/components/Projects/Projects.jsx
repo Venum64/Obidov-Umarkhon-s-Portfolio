@@ -66,31 +66,33 @@ const Portfolio = () => {
 
   return (
     <section className={p.portfolio} id='projects'>
-      <div className="speed from-bottom" data-speed='1200'>
-        <h2 className={p.portfolio_title}>{t('projects.title')}</h2>
-        <p className={p.portfolio_subtitle}>{t("projects.subtitle")}</p>
-      </div>
-      <div className={`container ${p.portfolio__content} speed from-bottom`} data-speed='1400'>
-        {cardsAdd.map((card) => (
-          <div className={p.portfolio__card} key={card.id}>
-            <div className={p.portfolio__card_img}>
-              <img src={card.img} alt={card.h} />
+      <div className="container">
+        <div className="speed from-bottom" data-speed='1200'>
+          <h2 className={p.portfolio_title}>{t('projects.title')}</h2>
+          <p className={p.portfolio_subtitle}>{t("projects.subtitle")}</p>
+        </div>
+        <div className={`${p.portfolio__content} speed from-bottom`} data-speed='1400'>
+          {cardsAdd.map((card) => (
+            <div className={p.portfolio__card} key={card.id}>
+              <div className={p.portfolio__card_img}>
+                <img src={card.img} alt={card.h} />
+              </div>
+              <h3 className={p.portfolio__card_h}>{card.h}</h3>
+              <p className={p.portfolio__card_p}>{card.p}</p>
+              <ul className={p.portfolio__card_skills}>
+                {card.skills.map((skill, index) => (
+                  <li key={index} className={p.portfolio__card_skills_item}>{skill}</li>
+                ))}
+              </ul>
+              <div className={p.portfolio__card_bottom}>
+                <a className={p.portfolio__card_bottom_a} href={card.a} target="_blank" rel="noreferrer">
+                  <i className="fa-brands fa-github"></i> Code</a>
+                <a className={p.portfolio__card_bottom_l} href={card.l} target="_blank" rel="noreferrer">
+                  <i className="fa-solid fa-arrow-up-right-from-square"></i> Show Website</a>
+              </div>
             </div>
-            <h3 className={p.portfolio__card_h}>{card.h}</h3>
-            <p className={p.portfolio__card_p}>{card.p}</p>
-            <ul className={p.portfolio__card_skills}>
-              {card.skills.map((skill, index) => (
-                <li key={index} className={p.portfolio__card_skills_item}>{skill}</li>
-              ))}
-            </ul>
-            <div className={p.portfolio__card_bottom}>
-              <a className={p.portfolio__card_bottom_a} href={card.a} target="_blank" rel="noreferrer">
-                <i className="fa-brands fa-github"></i> Code</a>
-              <a className={p.portfolio__card_bottom_l} href={card.l} target="_blank" rel="noreferrer">
-                <i className="fa-solid fa-arrow-up-right-from-square"></i> Show Website</a>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   )

@@ -53,28 +53,30 @@ const Services = () => {
 
   return (
     <section className={s.services} id='services'>
-      <h2 className={`${s.services_title} speed from-bottom`} data-speed='1250'>{t('services.title')}</h2>
-      <p className={`${s.services_subtitle} speed from-bottom`} data-speed='1275'>{t('services.subtitle')}</p>
-      <div className={`container ${s.services__block} speed from-bottom`} data-speed='1300'>
-        {cardsAdd.map((card) => (
-          <div key={card.id} className={s.services__card}>
-            <span className={s.services__card_i}>
-              <img src={card.icon} alt={{}} />
-            </span>
-            <h3 className={s.services__card_h}>{card.title}</h3>
-            <p className={s.services__card_p}>{card.desc}</p>
-            <ul className={s.services__card_list}>
-              {card.features.map((item, index) => (
-                <li key={index} className={s.services__card_list_wrapper}>
-                  <span className={s.services__card_list_icon}>
-                    <i className="fa-solid fa-arrow-right-long"></i>
-                  </span>
-                  <p className={s.services__card_list_text}>{item}</p>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+      <div className="container">
+        <h2 className={`${s.services_title} speed from-bottom`} data-speed='1250'>{t('services.title')}</h2>
+        <p className={`${s.services_subtitle} speed from-bottom`} data-speed='1275'>{t('services.subtitle')}</p>
+        <div className={`${s.services__block} speed from-bottom`} data-speed='1300'>
+          {cardsAdd.map((card) => (
+            <div key={card.id} className={s.services__card}>
+              <span className={s.services__card_i}>
+                <img src={card.icon} alt={{}} />
+              </span>
+              <h3 className={s.services__card_h}>{card.title}</h3>
+              <p className={s.services__card_p}>{card.desc}</p>
+              <ul className={s.services__card_list}>
+                {card.features.map((item, index) => (
+                  <li key={index} className={s.services__card_list_wrapper}>
+                    <span className={s.services__card_list_icon}>
+                      <i className="fa-solid fa-arrow-right-long"></i>
+                    </span>
+                    <p className={s.services__card_list_text}>{item}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   )
