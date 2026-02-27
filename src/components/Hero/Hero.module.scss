@@ -192,44 +192,64 @@
             gap: 20px;
         }
 
-        &_btn {
+        &_btn1 {
             padding: 12px 24px;
             border-radius: 12px;
             background: var(--accent-color);
-            border: 1px solid var(--line-color);
-            color: var(--text-main);
+            border: 1px solid var(--accent-color);
+            color: var(--body-bg);
             font-family: "Inter", sans-serif;
             font-weight: 600;
             font-size: 16px;
             cursor: pointer;
-            transition: all 0.3s ease;
             display: inline-flex;
             align-items: center;
             justify-content: center;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateY(0);
 
             &:hover {
                 background: var(--body-bg);
-                border-color: var(--accent-color);
                 color: var(--accent-color);
-                transform: translateY(-2px);
-                box-shadow: 0 5px 15px rgba(0, 242, 254, 0.1);
+                transform: translateY(-3px);
+                box-shadow: 0 8px 25px rgba(0, 242, 254, 0.2);
             }
 
             &:active {
-                transform: translateY(0);
+                transform: scale(0.97);
+            }
+        }
+        &_btn2 {
+            padding: 12px 24px;
+            border-radius: 12px;
+            background: var(--body-bg);
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+            font-family: "Inter", sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateY(0);
+
+            &:hover {
+                background: var(--accent-color);
+                color: var(--body-bg);
+                transform: translateY(-3px);
+                box-shadow: 0 8px 25px rgba(0, 242, 254, 0.2);
             }
 
-            &:last-child {
-                background: var(--body-bg);
-                border-color: var(--accent-color);
-                color: var(--main);
-
-                &:hover {
-                    background: transparent;
-                    color: var(--accent-color);
-                    box-shadow: 0 5px 20px rgba(0, 242, 254, 0.3);
-                }
+            &:active {
+                transform: scale(0.97);
             }
+        }
+
+        &_btn_a {
+            text-decoration: none;
+            display: inline-block;
         }
 
         &_icons {

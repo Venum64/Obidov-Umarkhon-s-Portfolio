@@ -24,7 +24,7 @@ $Inter : ('Regular', 400),
 
 @each $name, $weight in $Inter {
     @font-face {
-        font-family: 'FontName';
+        font-family: 'Inter';
         src: url('../fonts/Inter/Inter_24pt-#{name}.ttf');
         font-weight: $weight;
     }

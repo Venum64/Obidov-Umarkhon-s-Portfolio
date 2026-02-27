@@ -84,8 +84,15 @@ const Hero = () => {
                         </h3>
                         <p className={`${h.review__l_p} speed from-left`} data-speed='1200'>{t('hero.mydesc')}</p>
                         <div className={`${h.review__l_btns} speed from-left`} data-speed='1250'>
-                            <button className={h.review__l_btn}>{t('navigation.contacts')}</button>
-                            <button className={h.review__l_btn}>{t('hero.myprojects')}</button>
+                            <a href="#contacts" className={h.review__l_btn_a}>
+                                <button className={h.review__l_btn1}>{t('navigation.contacts')}
+                                </button>
+                            </a>
+                            <a href="#projects" className={h.review__l_btn_a}>
+                                <button className={h.review__l_btn2}>
+                                    {t('hero.myprojects')}
+                                </button>
+                            </a>
                         </div>
                         <div className={`${h.review__l_icons} speed from-left`} data-speed='1300'>
                             {iconsAdd.map((i) => (
