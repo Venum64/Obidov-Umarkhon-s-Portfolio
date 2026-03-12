@@ -1,5 +1,3 @@
-// header start
-
 .header {
     padding: 20px 15px;
     transition: background 0.3s ease-in-out;
@@ -139,9 +137,11 @@
     box-shadow: var(--header-shadow);
 }
 
-// header end
 
-// review start
+.scrolled {
+    background: var(--header-bg);
+    box-shadow: var(--header-shadow);
+}
 
 .review {
     margin-top: 150px;
@@ -150,7 +150,7 @@
     &__content {
         display: flex;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: space-between;
         gap: 50px;
     }
 
@@ -159,17 +159,12 @@
         flex-direction: column;
         gap: 20px;
 
-        &_text {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
         &_h {
             font-weight: 600;
             font-family: "Montserrat", sans-serif;
             font-size: 36px;
             color: var(--main);
+            min-height: 44px;
         }
 
         &_s {
@@ -177,6 +172,8 @@
             font-family: "Inter", sans-serif;
             font-size: 22px;
             color: var(--main);
+            min-height: 32px;
+            display: block;
         }
 
         &_p {
@@ -185,11 +182,15 @@
             max-width: 350px;
             width: 100%;
             color: var(--muted);
+            line-height: 1.5;
         }
 
         &_btns {
             display: flex;
             gap: 20px;
+            @media screen and (max-width:358px) {
+                flex-direction: column;
+            }
         }
 
         &_btn1 {
@@ -219,6 +220,7 @@
                 transform: scale(0.97);
             }
         }
+
         &_btn2 {
             padding: 12px 24px;
             border-radius: 12px;
@@ -257,43 +259,43 @@
             gap: 15px;
         }
 
-        &_icon {
-            font-size: 18px;
-
-            & i {
-                color: var(--accent-color);
-                transition: 0.3s color ease-in-out;
-            }
-        }
-
         &_a {
             background: var(--line-color);
             border-radius: 12px;
             padding: 10px;
-            text-align: center;
-            transition: 0.3s all ease-in-out;
             display: flex;
-            align-items: center;
-            justify-content: center;
+            transition: 0.3s;
 
             &:hover {
                 background: var(--accent-color);
                 transform: scale(1.1);
-                box-shadow: 0 5px 20px rgba(0, 242, 254, 0.3);
 
-                & i {
+                i {
                     color: var(--line-color);
                 }
             }
         }
-    }
 
-    &__r img {
-        border-radius: 50%;
-        border: 2px solid var(--muted);
-        width: 350px;
-        height: 350px;
+        &_icon i {
+            color: var(--accent-color);
+        }
     }
 }
 
-// review end
+.speed {
+    opacity: 0;
+    transition: all 0.8s ease-out;
+}
+
+.from-left {
+    transform: translateX(-50px);
+}
+
+.from-right {
+    transform: translateX(50px);
+}
+
+:global(.active) {
+    opacity: 1 !important;
+    transform: translate(0) !important;
+}
